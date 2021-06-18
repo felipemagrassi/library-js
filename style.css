@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+input[type='button']{
+  margin: auto;
+  width: 100%;
+}
+
+.library {
+  margin-top: 1.5rem;
+}
+
+
