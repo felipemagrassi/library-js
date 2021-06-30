@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Library</title>
 </head>
@@ -12,36 +13,77 @@
 <body>
 
   <main>
-    <h1 class="title">Library</h1>
-    
-    <section class="add-book">
-      <form action="">
-        <label for="title">Book Title</label>
-        <input placeholder="The Hobbit" required type="text" name="title" id="title">
-        <label for="author">Author Name</label>
-        <input placeholder="J.R.R. Tolkienn" required type="text" name="author" id="author">
-
-          <label for="page-read">Pages read</label>
-          <input placeholder="0" type="number" name="page-read" id="page-read">
-
-          <label for="pages">Total of Pages</label>
-          <input placeholder="1000" required type="number" name="pages" id="pages">
-        <div class="read">          
-          <label for="read">Read</label>
-          <input type="checkbox" name="read" id="read">
-        </div>
-        <input value='Send' type='button' onclick="addBookToLibrary()">
-      </form>
-    </section>
-
+    <div class='addBook'>
+      <h1 class="title">Library</h1>
+      <section class="add-book">
+        <form action="">
+          <div class="mb-2">
+            <label class='form-label' for="title">Book Title</label>
+            <input class='form-control' placeholder="The Hobbit" required type="text" name="title" id="title">
+          </div>
+          <div class="mb-2">
+            <label class='form-label' for="author">Author Name</label>
+            <input class='form-control' placeholder="J.R.R. Tolkien" required type="text" name="author" id="author">
+          </div>
+          <div class="mb-2">
+            <label class='form-label' for="pagesRead">Pages read</label>
+            <input class='form-control' placeholder="0" min='0' type="number" name="pagesRead" id="pagesRead">
+          </div>
+          <div class="mb-2  ">
+            <label class='form-label' for="totalPages">Total of Pages</label>
+            <input class='form-control' placeholder="1000" min='0' required type="number" name="totalPages" id="totalPages">
+          </div>
+          <div class="mb-1 form-check">
+            <input class="form-check-input" type="checkbox" name='read' value="read" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Read
+            </label>
+          </div>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon1"> Send </button>
+        </form>
+      </section>
+  </div>
     <section class="library">
-      <h1>No books yet</h1>
       <div class="show-books">
+        <table class="table table-hover table-responsive text-center">
+          <thead class='table-dark'>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Book Title</th>
+              <th scope="col">Author Name</th>
+              <th scope="col">Pages</th>
+              <th scope="col">Read</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>The Hobbit</td>
+              <td>J.R.R. Tolkien</td>
+              <td>0/1000</td>
+              <td>❌✅</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>The Hobbit</td>
+              <td>J.R.R. Tolkien</td>
+              <td>1000/1000</td>
+              <td>❌✅</td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>The Hobbit</td>
+              <td>J.R.R. Tolkien</td>
+              <td>0/1000</td>
+              <td>❌✅</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <script src="library.js"></script>
 
 </body>

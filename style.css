@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-
 main {
   display: flex;
   justify-content: center;
@@ -14,20 +13,24 @@ main {
   flex-direction: column;
 }
 
-form {
+@media screen and (min-width: 1200px) {
+  main {
+    flex-direction: row;
+  }
+}
+
+.addBook {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  flex-flow: column nowrap;
 }
 
-input[type='button']{
-  margin: auto;
-  width: 100%;
+section {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
-.library {
-  margin-top: 1.5rem;
+.show-books {
+  margin-top: 1rem;
 }
-
-
